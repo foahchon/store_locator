@@ -1,6 +1,6 @@
 # Store Locator API
 
- The idea of this API is to allow members to sign, associate vendors with themselves, associate products with their vendors, and then allow the vendors to add themselves or their products to the stores. This way, a store can have products from many vendors. Such an API could be used for a website that allows potential consumers to find niche products sold in their local area.
+ The idea of this API is to allow members to sign, associate vendors with themselves, associate products with their vendors, and then allow the vendors to add themselves or their products to the stores. This way, a store can have products from many vendors. Such an API could be used for a website that allows potential consumers to find niche products sold in their local area. A live version of this app is currently running  [here](http://3.213.154.214/) (you'll need Insomnia or another HTTP client to use).
 
  ## Getting started
 
