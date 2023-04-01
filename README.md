@@ -7,7 +7,8 @@
  The steps to setup and run this API locally are as follows:
 
  1. Unzip the contents of `store_locator.zip` file.
- 2. In your PostgreSQL database, create a database called something like `store_locator`.
+ 2. In your PostgreSQL database, create a database called something like `store_locator`
+    - You will also have to create a `store_locator_test` database if you want to run the tests).
  3. Modify the `SQLALCHEMY_DATABSE_URI` constant on line 9 of `\flask\store_locator\src\__init__.py` to point to your own local PostgreSQL database.
  4. In the root folder where `store_locator` was unzipped, create a virtual environment with something like the following command: `python -m venv venv`. Once it's created, activate it (this will vary depending on your operating system; on Windows it's `./venv/scripts/activate`).
  5. Once inside the Python virtual environment, install the requirements listed in the `requirements.txt` file: `python -m pip install -r requirements.txt`.

@@ -5,6 +5,7 @@ from sqlalchemy.sql import expression
 from sqlalchemy.ext.compiler import compiles
 from sqlalchemy.types import DateTime
 
+from . import db
 
 class utcnow(expression.FunctionElement):
     type = DateTime()
@@ -14,8 +15,6 @@ class utcnow(expression.FunctionElement):
 @compiles(utcnow, 'postgresql')
 def pg_utcnow(element, compiler, **kw):
     return "TIMEZONE('utc', CURRENT_TIMESTAMP)"
-
-db = SQLAlchemy()
 
 stores_products_table = db.Table('stores_products',
     db.Column('store_id', db.Integer, db.ForeignKey('stores.id'), primary_key=True),
@@ -138,6 +137,7 @@ class Store(db.Model):
             'name': self.name,
             'street_address': self.street_address,
             'city': self.city,
+            'state': self.state,
             'zip_code': self.zip_code,
             'latitude': float(self.latitude),
             'longitude': float(self.longitude)
