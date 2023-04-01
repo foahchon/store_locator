@@ -1,6 +1,6 @@
 from flask import Flask, jsonify
 from dotenv import load_dotenv
-from store_locator.src import create_app
+from src import create_app
 
 load_dotenv()
 
