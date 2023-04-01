@@ -1,5 +1,5 @@
 from flask import Flask, jsonify
-from src import create_app
+from store_locator.src import create_app
 
 app = create_app()
 
