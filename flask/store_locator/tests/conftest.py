@@ -1,12 +1,12 @@
 import os
 import pytest
 
+from dotenv import load_dotenv
 from store_locator.src import create_app
 from store_locator.src import db as _db
 
-
-TEST_DATABASE_URI = 'postgresql://postgres@localhost:5432/store_locator_test'
-
+load_dotenv()
+TEST_DATABASE_URI = os.getenv('TEST_DATABASE_URI')
 
 @pytest.fixture(scope='session')
 def app(request):
